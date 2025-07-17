@@ -1,0 +1,19 @@
+time_series_raw:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/time_series.csv
+
+time_series_cleaned:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/time_series_cleaned.parquet
+
+single_series:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/channel_1.parquet
+
+model_bytes:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/channel_1_model.pkl
+
+forecast_result:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/forecast_result.csv
